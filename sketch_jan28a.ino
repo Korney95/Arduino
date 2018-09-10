@@ -2,7 +2,7 @@
 
 Servo servo; //объявляем переменную servo типа Servo
 
-void setup() //процедура setup
+void setup() //процедура setup (что произойдет при старете)
 
 {
 

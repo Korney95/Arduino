@@ -107,18 +107,7 @@ void set_mp_chn(byte chn1) // Управление мультиплексоро�
     case 2: digitalWrite(18, HIGH); digitalWrite(19, LOW); break;
     case 3: digitalWrite(18, HIGH); digitalWrite(19, HIGH); break;
   }  
-}
 
-void enc() // Обработка энкодера
-{
-  currenttime=millis();
-  if (abs(ltime-currenttime)>50) //  антидребезг
-   {
-    b=digitalRead(4);
-    if (b == HIGH && eval<=122) eval=eval+5;
-      else if (b == LOW && eval>=5) eval=eval-5;
-    MIDI.sendControlChange(9,eval,1); 
-    ltime = millis();
-   }
+
    
 }
